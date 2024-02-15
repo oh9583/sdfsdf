@@ -149,6 +149,8 @@ rm /tmp/chimney-dashboard.zip
 echo "creating 0chain_blobber.yaml"
 #curl -L "https://github.com/0chain/zcnwebappscripts/raw/${BRANCH_NAME}/config/0chain_blobber.yaml" -o ${PROJECT_ROOT}/config/0chain_blobber.yaml
 #curl -L "https://github.com/0chain/zcnwebappscripts/raw/${BRANCH_NAME}/config/0chain_validator.yaml" -o ${PROJECT_ROOT}/config/0chain_validator.yaml
+cp /root/0chain_blobber.yaml ${PROJECT_ROOT}/config/0chain_blobber.yaml
+cp /root/0chain_validator.yaml ${PROJECT_ROOT}/config/0chain_validator.yaml
 
 echo "updating write_price"
 sed -i "s/write_price.*/write_price: ${WRITE_PRICE}/g" ${PROJECT_ROOT}/config/0chain_blobber.yaml
