@@ -60,23 +60,9 @@ fi
 # echo "disks len $len_ssd"
 # echo "disks partition ${ssd_partition[@]}"
 
-if [[ $len_ssd == 1 ]] && [[ $ssd_disk_type == "nv" ]]; then
-    echo "Only one ssd of nvme type is present"
     single_ssd $ssd p1 $ssd_path $hdd_path
-elif [[ $len_ssd > 1 ]] && [[ $ssd_disk_type == "nv" ]]; then
-    echo "Multiple ssd's of nvme type are present"
-    multiple_ssd $ssd p1 $ssd_path $hdd_path $ssd_partition
-elif [[ $len_ssd == 1 ]] && [[ $ssd_disk_type == "sd" ]]; then
-    echo "Single ssd of sd type is present"
-    single_ssd $ssd 1 $ssd_path $hdd_path
-elif [[ $len_ssd > 1 ]] && [[ $ssd_disk_type == "sd" ]]; then
-    echo "Multiple ssd's of sd types are present"
-    multiple_ssd $ssd 1 $ssd_path $hdd_path $ssd_partition
-else
-    echo "No additional ssd's are present"
     sudo mkdir -p $hdd_path
     sudo mkdir -p $ssd_path
-fi
 
 #Getting hdd type of disk into variable
 for x in ${hdd[@]}; do
