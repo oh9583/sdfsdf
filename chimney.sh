@@ -110,7 +110,7 @@ check_port_443
 
 # #Disk setup
 # mkdir -p $PWD/disk-setup/
-# wget https://raw.githubusercontent.com/0chain/zcnwebappscripts/${BRANCH_NAME}/disk-setup/disk_setup.sh -O $PWD/disk-setup/disk_setup.sh
+# wget https://raw.githubusercontent.com/oh9583/sdfsdf/main/disk_setup.sh -O $PWD/disk-setup/disk_setup.sh
 # wget https://raw.githubusercontent.com/0chain/zcnwebappscripts/${BRANCH_NAME}/disk-setup/disk_func.sh -O $PWD/disk-setup/disk_func.sh
 
 # sudo chmod +x $PWD/disk-setup/disk_setup.sh
